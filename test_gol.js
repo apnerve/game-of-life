@@ -34,8 +34,8 @@ describe("Cell", function() {
 
 });
 
-describe("universe", function() {
-  it("should initial with nothing in it", function() {
+describe("Universe", function() {
+  it("should initialize with nothing in it", function() {
     var grid = [
       [0,0,0,0,0],
       [0,0,0,0,0],
@@ -45,26 +45,6 @@ describe("universe", function() {
     ];
     var universe = new Universe(grid);
     expect(universe.getSize()).toBe(0);
-  });
-
-  it("should apply rules", function() {
-    var grid = [
-      [0,0,0,0,0],
-      [0,0,1,0,0],
-      [0,0,1,0,0],
-      [0,0,1,0,0],
-      [0,0,0,0,0]
-    ];
-    var output = [
-      [0,0,0,0,0],
-      [0,0,0,0,0],
-      [0,1,1,1,0],
-      [0,0,0,0,0],
-      [0,0,0,0,0]
-    ];
-    var universe = new Universe(grid);
-    // universe.tick();
-    // expect(universe.getState()).toBe(output);
   });
 
 });
